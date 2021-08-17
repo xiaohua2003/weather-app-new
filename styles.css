@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+main{
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+h1{
+    text-align:center;
+    color: black;
+}
