@@ -2,17 +2,94 @@ body{
     margin:0;
     padding:0;
     box-sizing: border-box;
-   
+    background-image: url("./img/background.jpg");
+
 }
-main{
+/* form style*/
+h1{
+    font-size: 2.5rem;
+    text-align:center;
+    margin-top:10%;
+}
+#main{
+    margin:0 auto;
+    width:65%;
+    margin-top:6%;
     background-color: #20bf55;
     background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+    border-radius:15px;
+    box-shadow: 10px 16px 30px gray;
 }
-h1{
+#form{
+    display: flex;
+    flex-flow: column;
+    width:65%;
+    margin: 0 auto;
+    
+}
+div{
+    display:flex;
+    flex-direction:column;
+}
+#generate{
+    margin-top:5%;
+    margin-bottom:11%;
+    padding: 6px;
+    font-size:1.3rem;
+    border-radius: 7px;
+    border: none;
+}
+button:hover{
+    background-color: #B2B1B9;
+}
+label{
+    font-size:1.3rem;
+    margin: 0.8% 0;
+}
+.zip-put{
+    font-size:1.2rem;
+
+}
+textarea{
+    font-size:1.2rem;
+}
+
+/*Weather forecast report*/
+#result-page{
+    margin:8% auto;
+    width:55%;
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+    border-radius:15px;
+    box-shadow: 10px 16px 30px gray;
+}
+#report{
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    width:80%;
+    font-size:1.3rem;
+}
+h3{
     text-align:center;
+    font-size:1.7rem;
+}
+#remove{
+    padding: 10px;
+    font-size:1.2rem;
+    border-radius: 7px;
+    border: none;
+    width:8rem;
+    margin:7% auto;
+}
+
+
+/*footer*/
+footer{
+    text-align:center;
+    font-size:1.4rem;
+    padding:1.5%;
     color: black;
+    background-color: #00b6e4;
+   
 }
