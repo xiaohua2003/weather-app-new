@@ -10,7 +10,14 @@ app.listen(4000, function(){
 })
 
 app.use(express.static('website'));
-
-app.get("/all", function(req,res){
-    res.render("../test.html")
+let projectData={}
+app.post('/postData', function(req, res){
+    projectData['date']=req.body.date;
+    projectData['temp']=req.body.temp;
+    projectData['feeling']=req.body.feeling;
+    res.send(projectData)
+    console.log(projectData)
+})
+app.get('/all', function(req, res){
+    res.send(projectData)
 })
