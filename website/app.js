@@ -5,7 +5,8 @@ const apiKey="9c606971d1bdf33fab80334cc3f2c71c&units=metric";
 
 document.getElementById('generate').addEventListener("click", getResult)
 
-async function getResult(){
+async function getResult(e){
+e.preventDefault();
 const city=document.getElementById('city').value
 const URL=`${baseURL}${city}&appid=${apiKey}`
 const feeling=document.getElementById("feeling").value
@@ -17,7 +18,10 @@ let newDate=(d.getMonth()+1)+'-'+d.getDate()+'-'+d.getFullYear()
     updateUI(data)
   })
 }
-
+document.getElementById("remove").addEventListener("click", function(){
+document.getElementById('result-page').classList.add('invisible')
+document.getElementById('weather-form').reset();
+})
 
 //get weather data
 async function getWeather (url) {
@@ -52,11 +56,13 @@ async function postData(url, data){
 
 async function updateUI() {
   try{
+    document.getElementById('result-page').classList.remove('invisible');
+    document.getElementById('result-page').scrollIntoView({behavior:'smooth'});
     let res=await fetch('/all');
     let projectData=await res.json()
     console.log(projectData)
     document.getElementById('date').innerHTML=projectData.date;
-    document.getElementById('temp').innerHTML=projectData.temp;
+    document.getElementById('temp').innerHTML=`${projectData.temp}°C`;
     document.getElementById('comment').innerHTML=projectData.feeling;
   }catch(error){
     console.log(error)

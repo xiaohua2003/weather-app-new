@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <main class="main-content">
         <section id="main" >
             <div id="form">
                 <h1>Weather Journal App</h1>
-                <div id="zip">
-                    <label for="zip" class="city">Enter City Name:</label>
-                    <input type="text" placeholder="Vancouver" id="city" >
-                </div>
-                <div id="comment">
-                    <label for="feeling" class="feel">How are you feeling today?</label>
-                    <textarea name="" id="feeling" cols="20" rows="10"></textarea>
-                    <button id="generate" type="submit">Generate</button>
-                </div>
+                <form id="weather-form">
+                    <div id="zip">
+                        <label for="zip" class="city">Enter City Name:</label>
+                        <input type="text" placeholder="Vancouver" id="city" >
+                    </div>
+                    <div id="comments">
+                        <label for="feeling" class="feel">How are you feeling today?</label>
+                        <textarea name="" id="feeling" cols="20" rows="10"></textarea>
+                        <button id="generate" type="submit">Generate</button>
+                    </div>
+                </form>
             </div>
         </section>
-        <section id="result-page">
+        <section id="result-page" class='invisible'>
             <div id="report">
                 <h3>Weather Forecast:</h3>
-                <div id="date result"><b>Date:</b></div>
-                <div id="temp result"><b>Temperature:</b></div>
-                <div id="comment result"><b>Comments:</b></div>
+                <div class="result"><b>Date: </b> <span id="date"> </span></div>
+                <div class="result"><b>Temperature: </b> <span id="temp"> </span></div>
+                <div class="result"><b>Comments: </b><span id="comment"> </span ></div>
                 <button id="remove" type="submit">Remove</button>   
             </div>
         </section>
+    </main>    
     <footer>Created by Xiaohua 2021</footer>
-    <script src="app.js"></script>
+    <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
